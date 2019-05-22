@@ -1,0 +1,60 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: #f1f1f1;
+}
+.navigation{
+    background-color: #27368a; 
+    padding: 24px;
+}
+.navigation .lists li a{
+    color: goldenrod;
+    font-size: 18px;
+}
+.logo
+{
+    background-color: #27368a; 
+    margin-bottom: 10px;
+}
+.jumbo{
+    background-color: #f5c214;
+    padding: 25px;
+    text-align: center;
+}
+.jumbo a{
+    font-size: 25px;
+    letter-spacing: 15px;
+    color: black;
+}
+.jumbo a:hover{
+    text-decoration: none;
+    color:  red;
+}
+.container h1{
+    font-family: 'Arial';
+    text-align: center;
+}
+.container p{
+    text-align: center;
+}
+.services{
+    background-color: black;    
+    margin-left: 15px;
+    border-radius: 10px;
+    height: 200px;
+    padding: 15px;
+    font-family: 'Times New Roman';
+    width: 300px;
+}
+.services .icons{
+    font-size: 30px;
+    margin-left: 45%;
+    color: gold;
+}
+.services h4{
+    color: white;
+    text-align: center;
+}
+.services .service-details{
+    color: white;
+}
