@@ -1,6 +1,5 @@
 body{
-    margin: 0px;
-    padding: 0px;
+    
     background-color: #f1f1f1;
 }
 .navigation{
@@ -11,10 +10,12 @@ body{
     color: goldenrod;
     font-size: 18px;
 }
+.navigation .lists li a:hover{
+    color: white;
+}
 .logo
 {
     background-color: #27368a; 
-    margin-bottom: 10px;
 }
 .jumbo{
     background-color: #f5c214;
@@ -39,12 +40,11 @@ body{
 }
 .services{
     background-color: black;    
-    margin-left: 15px;
     border-radius: 10px;
     height: 200px;
     padding: 15px;
     font-family: 'Times New Roman';
-    width: 300px;
+    border-right: 1px solid gold;
 }
 .services .icons{
     font-size: 30px;
@@ -57,4 +57,57 @@ body{
 }
 .services .service-details{
     color: white;
+}
+@media screen and (max-width:992px){
+    .services{
+        border-bottom: 1px solid gold;
+    }
+    .images{
+        margin-top: 18px;
+        box-shadow: 1px 0px 7px 4px;
+        margin-left: 20%;
+    }
+    .gallery{
+        margin-top: 15px;
+    }
+}
+.images{
+    height: 300px;
+    box-shadow: 0px 4px 7px 3px;
+    transition: transform .4s;
+}
+.images:hover{
+    transform: scale(1.1);
+   
+}
+.about{
+    overflow: hidden;
+}
+
+.personal{
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0px 0px 6px 3px rgba(0,0,2, 0.5);
+    padding: 15px;
+}
+.rooms{
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 5px 0px 6px 3px rgba(0,0,2, 0.5);
+    padding: 15px;
+    height: 300px;
+}
+.contact{
+    background-color: black;
+    opacity: .9;
+    padding: 35px;
+    height: 600px;
+}
+.contact-form input{
+    opacity: .9;
+    color: black;
+    margin-top: 2px;
+    padding: 10px;
+    font-size: 17px;
+    font-family: 'Arial';
 }
