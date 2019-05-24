@@ -23,7 +23,7 @@ function name_validation(firstname){
         return true;
     }
     else{
-        document.getElementById('name').innerHTML = "<span style='color: red;'><sup>*</sup> Enter correct name";
+        alert("Please enter correct name");
         firstname.focus();
         return false;
     }
@@ -34,7 +34,7 @@ function email_validation(emailid){
         return true;
     }
     else{
-        document.getElementById('email').innerHTML = "<span style='color: red; '><sup>*</sup> Enter correct name";
+        alert("Please enter correct email id");
         emailid.focus();
         return false;
     }
@@ -47,7 +47,7 @@ function mobile_validation(mobile){
         window.location.reload();
     }
     else{
-        document.getElementById('mobile').innerHTML = "<span style='color: red; '><sup>*</sup> Enter correct mobile number";
+        alert("Please enter correct mobile number");
         mobile.focus();
         return false;
     }
