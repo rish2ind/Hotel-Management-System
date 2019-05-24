@@ -10,7 +10,7 @@
     <!-- External CSS Link  -->        
         <link rel="stylesheet" href="style.css">
     </head>
-    <body onload="document.registration.fname.focus();">
+    <body onload="document.registration.fname.focus();" style="background-image: url(Images/jaisel.jpg);">
     
     
                         <!----------------------------------    Header Section    ----------------------->
@@ -29,12 +29,12 @@
                         </div>
                         <div class="navbar-collapse collapse" id="navb">
                             <ul class="nav navbar-nav navbar-left lists">
-                                <li><a href="Hotel-Management.html" >Home</a></li>
-                                <li><a href="#About" >About</a></li>
-                                <li><a href="#Services" >Services</a></li>
-                                <li><a href="#Gallery" >Gallery</a></li>
-                                <li><a href="#" >Our Team</a></li>
-                                <li><a href="#" >Contact</a></li>
+                                <li><a href="Hotel-Management.html">Home</a></li>
+                                <li><a href="Hotel-Management.html">About</a></li>
+                                <li><a href="Hotel-Management.html">Services</a></li>
+                                <li><a href="Hotel-Management.html">Gallery</a></li>
+                                <li><a href="Hotel-Management.html">Our Team</a></li>
+                                <li><a href="Hotel-Management.html">Contact</a></li>
                             </ul>
                         </div>
                         
@@ -49,10 +49,10 @@
                 
                 
    <div class="container">
-      <div class="row">
-          <div class="col-md-6 personal">
-              <h2 style="text-align: center;">Personal Details</h2>
-       <form action="" name="registration" onSubmit="return formValidation();" method="get">
+       <div class="row block" >
+           <div class="col-md-6">
+               <center><h1>Personal Details</h1></center>
+               <form action="" name="registration" onSubmit="return formValidation();" method="get">
            <div class="form-group">
                <lable><b>Name : </b></lable>
                <input type="text" class="form-control" name="fname" placeholder="Enter Name" required="">
@@ -68,16 +68,9 @@
                <input type="text" class="form-control" name="mobiles" placeholder="Enter Mobile No." required="">
                <p id="mobile"></p>
            </div>
-           <input type="submit" name="submit" class="btn btn-info btn-block">
-       </form>
-           </div>
-           
-                        <!-----------------------------------     Rooms Details    ------------------------->
-                        
-           <div class="col-md-6 rooms">
-               <h2 style="text-align: center;">Rooms Details</h2>
-               
-               <form action="">
+               </div>
+               <div class="col-md-6">
+                  <center><h1>Rooms Details</h1></center>
                    <div class="form-group">
                        <lable><B>Types of Rooms</B> <sup style="color: red;">*</sup></lable>
                         <select name="room-type" id="" class="form-control">
@@ -86,6 +79,7 @@
                             <option value="">DELUX ROOM</option>
                             <option value="">SINGLE ROOM</option>
                             <option value="">GUEST HOUSE</option>
+                            
                         </select>       
                    </div>
                    <div class="form-group">
@@ -99,8 +93,19 @@
                            <option value="">5</option>
                        </select>
                    </div>
-               </form>
-           </div>
+                   <div class="form-group">
+                       <lable><b>Check-in</b></lable>
+                       <input type="date" class="form-control" name="cin">
+                   </div>
+                   <div class="form-group">
+                       <lable><b>Check-out</b></lable>
+                       <input type="date" class="form-control" name="cout">
+                   </div>
+           <input type="submit" name="submit" class="btn btn-info">
+           
+       </form>
+               </div>
+           
        </div>
    </div>
   
