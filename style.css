@@ -83,19 +83,16 @@ body{
 .about{
     overflow: hidden;
 }
-
-.personal{
+.block{
     background-color: white;
-    border-radius: 6px;
-    box-shadow: 0px 0px 6px 3px rgba(0,0,2, 0.5);
     padding: 15px;
+    font-family: 'Arial';
+    box-shadow: 2px 3px 15px 2px;
+    opacity: .9;
 }
-.rooms{
-    background-color: white;
-    border-radius: 6px;
-    box-shadow: 5px 0px 6px 3px rgba(0,0,2, 0.5);
+.block input{
     padding: 15px;
-    height: 300px;
+    font-size: 18px;
 }
 .contact{
     background-color: black;
