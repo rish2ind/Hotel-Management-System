@@ -71,6 +71,14 @@ body{
         margin-top: 15px;
     }
 }
+.gallery{
+    transition: transform .4s;
+    z-index: 1;
+}
+.gallery:hover{
+    
+    
+}
 .images{
     height: 300px;
     box-shadow: 0px 4px 7px 3px;
