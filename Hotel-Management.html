@@ -9,6 +9,31 @@
     
     <!-- External CSS Link  -->        
         <link rel="stylesheet" href="style.css">
+        
+        <style type="text/css">
+            .box{
+                background-color: black;
+                opacity: .5;
+                height: 155px;
+                width: 307px;
+                display: none;
+                position: absolute;
+                top: -1px;
+                color: white;
+                font-size: 18px;
+                text-align: center;
+                padding: 15px;
+                transition-delay: 1s;
+            }
+            .gallery:hover .box{
+                display: block;
+                 height: 149.62px;
+                background-color: black;
+                z-index: 2;
+                width: 307px;
+                
+            }
+        </style>
     </head>
     <body>
                         <!------------------------------------   Header Section   ------------------------->
@@ -122,19 +147,37 @@
            <a name="Gallery"></a>
             <h1 style="text-align: center; font-family: 'Arial';">Gallery</h1>
             <div class="row">
-                <div class="col-md-6 gallery">
+                <div class="col-md-3 gallery">
                     <img src="Images/Inside.jpg" alt="" class="img-responsive">
+                       <div class="box">
+                    <p style="margin-top: 40px;">Bar</p>
                 </div>
-                <div class="col-md-6 gallery" >
+                
+                </div>
+             
+                
+                <div class="col-md-3 gallery" >
                     <img src="Images/inside1.jpg" alt="" class="img-responsive">
+                    
+                       <div class="box">
+                    <p style="margin-top: 40px;"> Dinning Area</p>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 gallery">
+                </div>
+                
+            
+                <div class="col-md-3 gallery">
                     <img src="Images/inside2.jpg" alt="" class="img-responsive">
+                    
+                    <div class="box">
+                     <p style="margin-top: 40px;">Hall</p>
                 </div>
-                <div class="col-md-6 gallery">
-                    <img src="Images/inside3.jpg" alt="" class="img-responsive" style="margin-top: 5px;">
+                </div>
+                <div class="col-md-3 gallery">
+                    <img src="Images/inside3.jpg" alt="" class="img-responsive" >
+                    
+                    <div class="box">
+                     <p style="margin-top: 40px;">Waiting Room</p>
+                </div>
                 </div>
             </div>
         </div><br><br>
