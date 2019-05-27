@@ -39,9 +39,9 @@ body{
     text-align: center;
 }
 .services{
-    background-color: black;    
+/*    background-color: black;    */
     border-radius: 10px;
-    height: 200px;
+    height: 500px;
     padding: 15px;
     font-family: 'Times New Roman';
     border-right: 1px solid gold;
@@ -72,12 +72,12 @@ body{
     }
 }
 .gallery{
-    transition: transform .4s;
+    transition: transform .4s;   
     z-index: 1;
 }
 .gallery:hover{
-    
-    
+    overflow: hidden;
+    transform: scale(1.1);
 }
 .images{
     height: 300px;
