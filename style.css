@@ -116,3 +116,6 @@ body{
     font-size: 17px;
     font-family: 'Arial';
 }
+.contact-form input[type=submit]{
+    color: white;
+}
