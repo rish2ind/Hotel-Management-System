@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="style.css">
       </head>
       
-      <body style="background-image: url('Images/jaisel.jpg');">
+      <body style="background-image: url('Images/jaisel.jpg');" onload="document.registration.fname.focus()">
                          <!------------------------------------   Header Section   ------------------------->
                         
         <div class="container-fluid">
@@ -54,7 +54,7 @@
        <div class="row block" >
            <div class="col-md-6">
                <center><h1>Personal Details</h1></center>
-               <form action="" name="registration" onSubmit="return formValidation();" method="get">
+               <form action="" name="registration" onSubmit="return formValidation();" method="post">
            <div class="form-group">
                <lable><b>Name : </b></lable>
                <input type="text" class="form-control" name="fname" placeholder="Enter Name" required="">
