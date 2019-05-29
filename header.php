@@ -57,8 +57,8 @@
                                 <li><a href="#About" >About</a></li>
                                 <li><a href="#Services" >Services</a></li>
                                 <li><a href="#Gallery" >Gallery</a></li>
-                                <li><a href="#Contact" >Contact / Sign Up</a></li>
-                                <li><a href="user-login.php">Login</a></li>
+                                <li><a href="#Contact" >Contact</a></li>
+                                <li><a href="user-login.php">Sign In / Sign Up</a></li>
                             </ul>
                         </div>
                         
