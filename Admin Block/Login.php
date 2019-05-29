@@ -1,4 +1,32 @@
-<html>
+<?php
+include("connect.php");
+
+    if(isset($_POST['submit'])){
+        $user = $_POST['user'];
+        $pass = md5($_POST['pass']);
+        
+        $sql = "select * from admin where username = '$user' AND password = '$pass'";
+        $res = mysqli_query($conn, $sql);
+        $data = mysqli_fetch_array($res);
+        if(is_array($data)){
+            $_SESSION['Aname'] = $data['username'];
+            echo "<script>
+                    alert('Login Successful');
+                    window.location.href = 'dashboard.php';
+                    </script>";
+        }
+        else{
+            echo "<script>
+                    alert('Invalid Username and Password');
+                    window.location.href='Login.php';
+                    </script> ";
+        }
+     }
+?>
+   
+
+   
+   <html>
     <head>
         <title>Admin Panel</title>
         
@@ -9,6 +37,9 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/> 
         
         <style type="text/css">
+            body{
+                background-color: #ffeded;
+            }
             .form-container{
                 width: 400px;
                 margin: 0 auto;
