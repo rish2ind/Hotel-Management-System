@@ -52,7 +52,7 @@
                         </div>
                         <div class="navbar-collapse collapse" id="navb">
                             <ul class="nav navbar-nav navbar-left lists">
-                                <li><a href="#Home" >Home</a></li>
+                                <li><a href="#Home" >Home </a></li> 
                                 <li><a href="#Booking" >Booking</a></li>
                                 <li><a href="#About" >About</a></li>
                                 <li><a href="#Services" >Services</a></li>
