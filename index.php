@@ -32,7 +32,7 @@
             </div>
             
        <div class="jumbotron jumbo">
-         <a href="rooms-booking.php">Book your Rooms</a>
+         <a href="new-room-booking.php">Book your Rooms</a>
        </div>
        
                             <!--------------------------------  About Section    --------------------------->
