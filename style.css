@@ -119,3 +119,11 @@ body{
 .contact-form input[type=submit]{
     color: white;
 }
+
+/**********************      Room booking style                     ************************/
+
+
+.details{
+    border: 1px solid black;
+    background-color: white;
+}
