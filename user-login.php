@@ -133,13 +133,29 @@
                 </form>
                        <?php
                         include('user-connect.php');
-                  
+                            
                         if(isset($_POST['signup'])){
                             $uname = $_REQUEST['name'];
                             $uemail = $_REQUEST['email'];
                             $upass = $_REQUEST['password'];
                             $ucontact = $_REQUEST['contact'];
+                                
+                                $check = "select * from user_signup where email = '$uemail'";
+                                $check_mobile = "select * from user_signup where contact = '$ucontact'";
                             
+                            $result_email = mysqli_query($conn, $check);
+                            $result_mobile = mysqli_query($conn, $check_mobile);
+                            
+                            if(mysqli_num_rows($result_email) > 0){
+                                echo "<script>alert ('Email id already exists');
+                                window.location.href = 'user-login.php';</script>";
+                            }
+                            else if(mysqli_num_rows($result_mobile) > 0){
+                                echo "<script>alert ('Mobile no. already exists');
+                                window.location.href = 'user-login.php';
+                                </script>";
+                            }
+                            else{
                             $sql = "insert into user_signup (name, email, password, contact) values('$uname','$uemail','$upass','$ucontact')";
                             
                             $res = mysqli_query($conn, $sql);
@@ -151,6 +167,7 @@
                                 echo "<script> 
                                     alert ('Failed');
                                 </script>";
+                            }
                             }
                         }
                         
