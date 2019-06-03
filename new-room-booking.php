@@ -69,12 +69,12 @@
                         </div>
                         <div class="navbar-collapse collapse" id="navb">
                             <ul class="nav navbar-nav navbar-left lists">
-                                <li><a href="#Home" >Home</a></li>
-                                <li><a href="#Booking" >Booking</a></li>
-                                <li><a href="#About" >About</a></li>
-                                <li><a href="#Services" >Services</a></li>
-                                <li><a href="#Gallery" >Gallery</a></li>
-                                <li><a href="#Contact" >Contact</a></li>
+                                <li><a href="index.php" >Home</a></li>
+                                <li><a href="index.php" >Booking</a></li>
+                                <li><a href="index.php" >About</a></li>
+                                <li><a href="index.php" >Services</a></li>
+                                <li><a href="index.php" >Gallery</a></li>
+                                <li><a href="index.php" >Contact</a></li>
                                 <li><a href="user-login.php">Sign In / Sign Up</a></li>
                             </ul>
                         </div>
@@ -87,7 +87,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-3">
-            <div class="details"><p class="rooms">Supirior</p><a href="superior-rooms.php"><img src="Images/Superior.jpg" alt="" class="img-responsive"></a><p class="rooms-inner">These executive rooms are well suited for business travelers. The rooms are voguish and tastefully designed with the sole aim of making it a perfect business suite..</p></div>
+            <div class="details"><p class="rooms">Standard</p><a href="superior-rooms.php"><img src="Images/Superior.jpg" alt="" class="img-responsive"></a><p class="rooms-inner">These executive rooms are well suited for business travelers. The rooms are voguish and tastefully designed with the sole aim of making it a perfect business suite..</p></div>
         </div>
         <div class="col-md-3">
             <div class="details"><p class="rooms">Delux</p><a href="delux-rooms.php"><img src="Images/delux.jpg" alt="" class="img-responsive"></a><p class="rooms-inner">The deluxe rooms come equipped with all the luxury facilities with a very personal touch which makes them a favourite amongst our corporate guests.</p></div>
