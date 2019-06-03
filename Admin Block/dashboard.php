@@ -40,7 +40,13 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-6 head">
-                    <h1>Admin Panel</h1>
+                    <h1>Welcome : <span style="color: white; font-size: 25px;"><?php include('connect.php');
+                        $sql = "select * from admin where username ='admin@123'";
+                        $run = mysqli_query($conn, $sql);
+                        $result = mysqli_fetch_array($run);
+                        
+                        echo $result['Name'];
+                        ?></span></h1>
                 </div>
                 <div class="col-md-6 head">
                     <h2 style="float: right; height: 39px;">Logout</h2>

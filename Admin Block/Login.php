@@ -2,8 +2,8 @@
 include("connect.php");
 
     if(isset($_POST['submit'])){
-        $user = $_POST['user'];
-        $pass = md5($_POST['pass']);
+        $user = $_POST['username'];
+        $pass = $_POST['password'];
         
         $sql = "select * from admin where username = '$user' AND password = '$pass'";
         $res = mysqli_query($conn, $sql);
@@ -73,11 +73,11 @@ include("connect.php");
                 <form action="" method="post">
                     <div class="form-group">
                         <lable><b>Username :</b></lable>
-                        <input type="text" name="user" class="form-control" required="" placeholder="Enter your username">
+                        <input type="text" name="username" class="form-control" required="" placeholder="Enter your username">
                     </div>
                     <div class="form-group">
                         <lable><b>Password</b></lable>
-                        <input type="password" class="form-control" name="pass" required="" placeholder="Enter your password">
+                        <input type="password" class="form-control" name="password" required="" placeholder="Enter your password">
                     </div>
                     <input type="submit" class="btn btn-info" value="Submit" name="submit">
                 </form>
