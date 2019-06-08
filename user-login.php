@@ -62,10 +62,14 @@
                             
                             $log = "select * from user_signup where email = '$email' and password = '$password'";
                             $run = mysqli_query($conn, $log);
-                            if($run){
+                            $data=mysqli_fetch_array($run);
+                            if($data)
+                            {
+                                
+                                    $_SESSION['user'] = $data['email'];
                                 echo "<script>
                                     alert ('Login Successfull');
-                                    window.location.href = 'index.php';
+                                    window.location.href= 'index.php';
                                 </script>";
                             }
                             else{
