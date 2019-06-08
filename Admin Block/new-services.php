@@ -1,4 +1,10 @@
-<html>
+<?php
+    include('connect.php');
+    $sql = "select * from services where id = '5'";
+    $run = mysqli_query($conn, $sql);
+    $data = mysqli_fetch_array($run);
+?>
+   <html>
     <head>
         <title>Add new services</title>
         
@@ -58,20 +64,43 @@
               New Services
           </div>
            <div class="form">
+           <?php
+                include('connect.php');
+               
+               if(isset($_POST['submit'])){
+                   $name = $_POST['service'];
+                   $class = $_POST['class'];
+                   $descript = $_POST['description'];
+                   $sql = "insert into services (name, class, description) values ('$name', '$class', '$descript')";
+                   $run = mysqli_query($conn, $sql);
+                   if($run){
+                       echo "<script> alert ('Services added successfully'); </script>";
+                       
+                   }
+               }
+               ?>
             <form action="" method="post">
                
                 <div class="form-group">
                     <lable><b>Name of service : </b></lable>
-                    <input type="text" class="form-control" placeholder="Add new services" name="service" required="">
+                    <input type="text" class="form-control" placeholder="Add new services" name="service" value="<?php echo $data['name'];?>" required="">
                 </div>
                 
                 <div class="form-group">
                     <lable><b>Icon : </b></lable>
-                    <input type="text" class="form-control" placeholder="Enter the class name of icon" name="icon" required="">
+                    <input type="text" class="form-control" placeholder="Enter the class name of icon" name="class" value="<?php echo $data['class']; ?>" required="">
                 </div>
                 <div class="form-group">
                     <lable><b>Description : </b></lable>
                     <textarea placeholder="Enter the description of service......" name="description" cols="30" rows="10" class="form-control"></textarea>
+                </div>
+                <div class="form-group">
+                    <lable><b>Check-class : </b></lable>
+                    <input type="text" class="form-control" placeholder="Enter check font class" name="subclass">
+                </div>
+                <div class="form-group">
+                    <lable><b>Sub Points : </b></lable>
+                    <input type="text" class="form-control" placeholder="Enter sub points of description" name="subpoints">
                 </div>
                 <center>    <input type="submit" class="btn btn-success" value="Submit" name="submit"></center>
                 

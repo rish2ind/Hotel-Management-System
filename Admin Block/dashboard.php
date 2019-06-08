@@ -1,4 +1,6 @@
-
+<?php
+    session_start();
+?>
    <html>
     <head>
         <title>Dashboard</title>
@@ -18,7 +20,7 @@
             .aside{
                 background-color: #f5c32c;
                 padding: 15px;
-                height: 100%;
+                height: 800px;
             }
             .aside ul li a{
                 color: black;
@@ -29,6 +31,12 @@
                 color: red;
             }
             #dropdown{
+                display: none;
+                list-style-type: none;
+                font-size: 20px;
+                font-family: 'Helvetica';
+            }
+            #dropgallery{
                 display: none;
                 list-style-type: none;
                 font-size: 20px;
@@ -49,7 +57,7 @@
                         ?></span></h1>
                 </div>
                 <div class="col-md-6 head">
-                    <h2 style="float: right; height: 39px;">Logout</h2>
+                    <a href="logout.php"><h2 style="float: right; height: 39px; color: gold;">Logout</h2></a>
                 </div>
             </div>
         </div>
@@ -59,7 +67,12 @@
                     <ul style="list-style-type: none;">
                         <li><h2><a class="active" href="new-bookings.php" target="demo"  >Dashboard</a></h2></li>
                         <li><h3><a href="room-availabilty.php" target="demo" >Rooms Availabilty</a></h3></li>
-                        <li><h3><a href="#" onclick="myFunction();" >Services</a></h3>
+                        <li><h3><a href="gallery.php" onclick="myGallery();" target="demo">Gallery</a></h3>
+                                <ul id="dropgallery">
+                                    <li><a href="Add-Gallery.php" target="demo">Add Images</a></li>
+                                </ul>
+                            </li>
+                        <li><h3><a href="services.php" onclick="myFunction();" target="demo" >Services</a></h3>
                             <ul id="dropdown">
                                 <li><a href="new-services.php" target="demo">Add Services</a></li>
                                 <li><a href="#" >Delete Services</a></li>
@@ -68,7 +81,7 @@
                     </ul>                 
                 </div>
                 <div class="col-md-9">
-                    <iframe src="iframe-default.php" name="demo" width="100%" height="100%" scrolling="no" frameborder="no"></iframe>
+                    <iframe src="iframe-default.php" name="demo" width="100%" height="800px" scrolling="no" frameborder="no"></iframe>
                 </div>
             </div>
         </div>
@@ -76,6 +89,15 @@
         <script type="text/javascript">
             function myFunction(){
                 var x = document.getElementById('dropdown');
+                if(x.style.display === 'none'){
+                    x.style.display = 'block';
+                }
+                else{
+                    x.style.display = 'none';
+                }
+            }
+            function myGallery(){
+                var x = document.getElementById('dropgallery');
                 if(x.style.display === 'none'){
                     x.style.display = 'block';
                 }
