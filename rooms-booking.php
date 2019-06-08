@@ -1,7 +1,53 @@
-<?php
-    include('header-other.php');
-?>
-                  <!---------------------------------------------        Personal Details   --------------------------------->
+
+    <html>
+      <head>
+          <title>Bookings</title>
+          
+          <!--   Font Awesome Link   -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">  
+        
+    <!-- Bootstrap CSS Link   -->  
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/> 
+    
+    <!-- External CSS Link  -->        
+        <link rel="stylesheet" href="style.css">
+      </head>
+      
+      <body style="background-image: url('Images/jaisel.jpg');" onload="document.registration.fname.focus()">
+                         <!------------------------------------   Header Section   ------------------------->
+                        
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 logo">
+                    <img src="Images/Hotel.jpg" alt="" height="100px" >
+                </div>
+                <div class="col-md-8">
+                    <nav class="navbar navbar-default navigation">
+                        <div class="navbar-header ">
+                            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navb">
+                                <i class="glyphicon glyphicon-align-center"></i>
+                            </button>
+                        </div>
+                        <div class="navbar-collapse collapse" id="navb">
+                            <ul class="nav navbar-nav navbar-left lists">
+                                <li><a href="index.php" >Home</a></li>
+                                <li><a href="index.php" >About</a></li>
+                                <li><a href="index.php" >Services</a></li>
+                                <li><a href="index.php" >Gallery</a></li>
+                                <li><a href="index.php" >Contact</a></li>
+                                <li><a href="user-login.php">Login / Sign up</a></li>
+                            </ul>
+                        </div>
+                        
+                        
+                        
+                    </nav>
+                </div>
+            </div>
+        </div>
+      </body>
+    </html>           
+                <!---------------------------------------------        Personal Details   --------------------------------->
                 
                 
    <div class="container">
