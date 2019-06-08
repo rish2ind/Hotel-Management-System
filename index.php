@@ -1,9 +1,13 @@
 <?php
-
     include('header.php');
+    include('user-connect.php');
+
+    $sql = "select * from services";
+    $run = mysqli_query($conn, $sql);
+    $data = mysqli_fetch_array($run);
 ?>
                                 <!-----------------------------------   Carousel Section   ---------------------->
-                                
+           
             <div class="carousel slide" id="image" data-ride="slide">
                 <ol class="carousel-indicators">
                     <li data-target="#image" data-slide-to="0" class="active"></li>
@@ -52,6 +56,7 @@
         <div class="container-fluid" style="background-image: url(Images/supriya-s-447048-unsplash.jpg);">
             <a name="Services"></a><h1 style="text-align: center; font-family: 'Arial'; color: gold;">Our Services</h1>
             <div class="row">
+               
                 <div class="col-md-3 services">
                     <i class="far fa-clock icons"></i><h4>24 Hours Restaursnt</h4><p class="service-details">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.                      
@@ -61,8 +66,8 @@
                     <i class="fas fa-check" style="color: gold;"></i> &nbsp;<span style="color: white;"> 24 Hours Room Service </span> <br>
                 </div>
                 <div class="col-md-3 services">
-                    <i class="fas fa-dumbbell icons"></i><h4>Gym Area</h4><p class="service-details">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    <i class="<?php echo $data['class']; ?> icons"></i><h4><?php echo $data['name']; ?></h4><p class="service-details">
+                        <?php echo $data['description']; ?>
                     </p>
                 </div>
                 <div class="col-md-3 services">
