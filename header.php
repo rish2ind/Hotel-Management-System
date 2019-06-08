@@ -1,4 +1,5 @@
-<html>
+<?php session_start();?>
+   <html>
     <head>
         <title>Hotel Name</title>
     <!--   Font Awesome Link   -->
@@ -47,10 +48,13 @@
                     <nav class="navbar navbar-default navigation">
                         <div class="navbar-header ">
                             <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navb">
-                                <i class="glyphicon glyphicon-align-center"></i>
+                                <i class="glyphicon glyphicon-align-center"></i>    
                             </button>
                         </div>
-                        <div class="navbar-collapse collapse" id="navb">
+                       
+                     
+                        
+                            <div class="navbar-collapse collapse" id="navb">
                             <ul class="nav navbar-nav navbar-left lists">
                                 <li><a href="#Home" >Home </a></li> 
                                 <li><a href="#Booking" >Booking</a></li>
@@ -58,9 +62,25 @@
                                 <li><a href="#Services" >Services</a></li>
                                 <li><a href="#Gallery" >Gallery</a></li>
                                 <li><a href="#Contact" >Contact</a></li>
-                                <li><a href="user-login.php">Sign In / Sign Up</a></li>
+                                <?php
+                                    
+                                    if(!isset($_SESSION['user']))
+                                    {
+                                           
+                                ?>      
+                                <li><a href="">Welcome : hllo</a></li>
+                                <?php
+                                    }
+                                else
+                                {  
+                                ?>
+                                    <li><a href="user-login.php">Signup/Sign In</a></li>   
+                                    <?php                                     
+                                }
+                                ?>
                             </ul>
                         </div>
+                      
                         
                         
                         
