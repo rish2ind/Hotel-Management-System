@@ -34,7 +34,9 @@
                 $run = mysqli_query($conn, $sql);
                 if($run >= 1){
                     move_uploaded_file($_FILES['images']['tmp_name'], $path.$pic);
-                    echo "<script> alert ('Image insert successfully'); </script>";
+                    echo "<script> alert ('Image insert successfully'); 
+                        window.location.href = 'gallery.php';
+                    </script>";
                 }
             }
         ?>
