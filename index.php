@@ -56,7 +56,7 @@
         <div class="container-fluid" style="background-image: url(Images/supriya-s-447048-unsplash.jpg);">
             <a name="Services"></a><h1 style="text-align: center; font-family: 'Arial'; color: gold;">Our Services</h1>
             <div class="row">
-               
+              
                 <div class="col-md-3 services">
                     <i class="far fa-clock icons"></i><h4>24 Hours Restaursnt</h4><p class="service-details">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.                      
