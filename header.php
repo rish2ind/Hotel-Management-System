@@ -1,4 +1,9 @@
-<?php session_start();?>
+<?php session_start(); 
+    include('user-connect.php');
+//    $sql = "select * from user_signup where email = '".$_SESSION["email"]."'";
+//    $run = mysqli_query($conn, $sql);
+//    $data = mysqli_fetch_array($run);
+?>
    <html>
     <head>
         <title>Hotel Name</title>
@@ -64,11 +69,11 @@
                                 <li><a href="#Contact" >Contact</a></li>
                                 <?php
                                     
-                                    if(!isset($_SESSION['user']))
+                                    if(isset($_SESSION['email']))
                                     {
                                            
                                 ?>      
-                                <li><a href="">Welcome : hllo</a></li>
+                                <li><a href="">Welcome : <?php echo $data['name']; ?></a></li>
                                 <?php
                                     }
                                 else
