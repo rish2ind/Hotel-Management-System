@@ -36,7 +36,8 @@
                         $update = "update services set name = '$name', class = '$class', description = '$description', subclass = '$subclass', subpoints = '$subpoints' where id = '$id'";
                         $query = mysqli_query($conn, $update);
                         if($query){
-                            echo "<script> alert ('Services updated successfully'); </script>";
+                            echo "<script> alert ('Services updated successfully');
+                                        window.location.href = 'services.php'; </script>";
                         }
                     }
                 

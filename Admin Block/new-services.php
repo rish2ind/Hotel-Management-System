@@ -71,11 +71,18 @@
                    $name = $_POST['service'];
                    $class = $_POST['class'];
                    $descript = $_POST['description'];
-                   $sql = "insert into services (name, class, description) values ('$name', '$class', '$descript')";
+                   $subclass = $_POST['subclass'];
+                   $subpoints = $_POST['subpoints'];
+                   $sql = "insert into services (name, class, description, subclass, subpoints) values ('$name', '$class', '$descript', '$subclass', '$subpoints')";
                    $run = mysqli_query($conn, $sql);
                    if($run){
-                       echo "<script> alert ('Services added successfully'); </script>";
+                       echo "<script> alert ('Services added successfully');
+                       window.location.href = 'services.php';</script>";
                        
+                   }
+                   else{
+                       echo "<script> alert ('Unsuccessfully');
+                       window.location.href = 'services.php';</script>";
                    }
                }
                ?>
@@ -83,12 +90,12 @@
                
                 <div class="form-group">
                     <lable><b>Name of service : </b></lable>
-                    <input type="text" class="form-control" placeholder="Add new services" name="service" value="<?php echo $data['name'];?>" required="">
+                    <input type="text" class="form-control" placeholder="Add new services" name="service"  required="">
                 </div>
                 
                 <div class="form-group">
                     <lable><b>Icon : </b></lable>
-                    <input type="text" class="form-control" placeholder="Enter the class name of icon" name="class" value="<?php echo $data['class']; ?>" required="">
+                    <input type="text" class="form-control" placeholder="Enter the class name of icon" name="class"  required="">
                 </div>
                 <div class="form-group">
                     <lable><b>Description : </b></lable>

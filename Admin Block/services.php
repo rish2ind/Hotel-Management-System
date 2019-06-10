@@ -53,7 +53,7 @@
                     <td><?php echo $data['subclass']; ?></td>
                     <td><?php echo $data['subpoints']; ?></td>
                     <td><a href="services_update.php?id=<?php echo $data['id'];?>" style="text-decoration: none">Edit</a></td>
-                    <td><a href="#" style="text-decoration: none">Delete</a></td>
+                    <td><a href="delete-service.php?id=<?php echo $data['id']; ?>" style="text-decoration: none">Delete</a></td>
                 </tr>  
                      <?php      }
                            ?>
