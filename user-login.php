@@ -66,7 +66,7 @@
                             if($data)
                             {
                                 
-                                    $_SESSION['user'] = $data['email'];
+                                    $_SESSION["email"] = $data['email'];
                                 echo "<script>
                                     alert ('Login Successfull');
                                     window.location.href= 'index.php';
