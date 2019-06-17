@@ -41,10 +41,9 @@ function email_validation(emailid){
 }
 function mobile_validation(mobile){
     var result = /^[0-9]+$/;
-    if(mobile.value.match(result)){
-        alert("Form Submited Successfully");
+    if(mobile.value.match(result))
+       {
         return true;
-        window.location.reload();
     }
     else{
         alert("Please enter correct mobile number");
