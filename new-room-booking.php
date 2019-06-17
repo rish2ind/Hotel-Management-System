@@ -73,7 +73,7 @@
                                 <li><a href="index.php" >Booking</a></li>
                                 <li><a href="index.php" >About</a></li>
                                 <li><a href="index.php" >Services</a></li>
-                                <li><a href="index.php" >Gallery</a></li>
+                                <li><a href="index.php" id="gallery1">Gallery</a></li>
                                 <li><a href="index.php" >Contact</a></li>
                                 <li><a href="user-login.php">Sign In / Sign Up</a></li>
                             </ul>
@@ -83,6 +83,7 @@
                 </div>
             </div>
         </div>
+        
         <div class="container-fluid"><img src="Images/background1.jpg" alt="" class="img-responsive" height="200px;"></div>
 <div class="container">
     <div class="row">
@@ -105,5 +106,12 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>  
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> 
   <script src="Personal-Validation.js"></script>
+   <script>
+       $(document).ready(function(){
+           $('#gallery1').click(function(){
+               $('')
+           }
+       }
+        </script>
     </body>
 </html>
