@@ -1,4 +1,12 @@
-<html>
+<?php
+    include('connect.php');
+    $sql = "select * from user_booking";
+    $run = mysqli_query($conn, $sql);
+   
+?>
+   
+
+   <html>
     <head>
         <title>Bookings</title>
         
@@ -39,7 +47,21 @@
                     <th>No. Of Rooms</th>
                     <th>Check-in</th>
                     <th>Check-out</th>
+                    <?php while( $data = mysqli_fetch_array($run))
+                {
+                    ?>
+                    <tr>
+                        <td><?php echo $data['id'];  ?></td>
+                        <td><?php echo $data['fname'];  ?></td>
+                        <td><?php echo $data['email'];  ?></td>
+                        <td><?php echo $data['mobiles'];  ?></td>
+                        <td><?php echo $data['room_type'];  ?></td>
+                        <td><?php echo $data['Room_No'];  ?></td>
+                        <td><?php echo $data['cin'];  ?></td>
+                        <td><?php echo $data['cout'];  ?></td>
+                    </tr>
                     
+                    <?php   } ?>
                 </table>
             </div>
         </div>
