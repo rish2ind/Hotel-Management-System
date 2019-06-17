@@ -6,6 +6,7 @@
     $run = mysqli_query($conn, $sql);
     
 ?>
+                               
                                 <!-----------------------------------   Carousel Section   ---------------------->
            
             <div class="carousel slide" id="image" data-ride="slide">
@@ -63,7 +64,7 @@
                     <i class="<?php echo $data['class']; ?> icons"></i><h4><?php echo $data['name']; ?></h4><p class="service-details">
                         <?php echo $data['description'];  ?>
                     </p>
-                     <i class="<?php echo $data['subclass']; ?>" style="color: gold;"></i> &nbsp;<span style="color: white;"> <?php echo $data['subpoints']; ?></span> <br>
+                     <span style="color: gold;"><?php echo $data['subclass']; ?> </span>&nbsp;<span style="color: white;"> <?php echo $data['subpoints']; ?></span> <br>
 <!--                     <i class="fas fa-check" style="color: gold;"></i> &nbsp;<span style="color: white;"> Non Vegitarian </span><br>-->
 <!--                     <i class="fas fa-check" style="color: gold;"></i> &nbsp;<span style="color: white;"> 24 Hours Room Service </span> <br>-->
                 </div> <?php } ?>
@@ -74,47 +75,70 @@
                             <!--------------------------------    Gallery Section   ------------------------->
                             
         <div class="container-fluid">
-           <a name="Gallery"></a>
+           <a name="Gallery" id="jqueryGallery"></a>
             <h1 style="text-align: center; font-family: 'Arial';">Gallery</h1>
             <div class="row">
-                <div class="col-md-3 gallery">
-                    <img src="Images/Inside.jpg" alt="" class="img-responsive">
-                       <div class="box">
+                <div class="col-md-3"><div class="zoom">
+                    <img src="Images/Inside_new.jpg" id="img" alt="" class="img-responsive">
+                     <div class="box">
                     <p style="margin-top: 40px; border-top: 3px solid white;
                 border-bottom: 3px solid white;">Bar</p>
                 </div>
-                
+                      </div>                                       
                 </div>
              
                 
-                <div class="col-md-3 gallery" >
-                    <img src="Images/inside1.jpg" alt="" class="img-responsive">
-                    
+                <div class="col-md-3" >
+                   <div class="zoom">
+                    <img src="Images/Inside_new1.jpg" alt="" id="img1" class="img-responsive">
                        <div class="box">
                     <p style="margin-top: 40px; border-top: 3px solid white;
                 border-bottom: 3px solid white;"> Dinning Area</p>
                 </div>
+                    </div>
+                    
                 </div>
                 
             
-                <div class="col-md-3 gallery">
-                    <img src="Images/inside2.jpg" alt="" class="img-responsive">
-                    
+                <div class="col-md-3">
+                   <div class="zoom">
+                    <img src="Images/inside_new2.jpg" alt="" id="img2" class="img-responsive">
                     <div class="box">
                      <p style="margin-top: 40px; border-top: 3px solid white;
                 border-bottom: 3px solid white;">Hall</p>
                 </div>
-                </div>
-                <div class="col-md-3 gallery">
-                    <img src="Images/inside3.jpg" alt="" class="img-responsive" >
+                    </div>
                     
+                </div>
+                <div class="col-md-3"><div class="zoom">
+                    <img src="Images/inside_new3.jpg" id="img3" alt="" class="img-responsive" >
                     <div class="box">
                      <p style="margin-top: 40px; border-top: 3px solid white;
                 border-bottom: 3px solid white;">Waiting Room</p>
                 </div>
+                    </div>
+                    
                 </div>
+            </div><br>
+            <div class="row">
+                <center><a href="gallery-user.php"><button class="btn btn-danger">More Images</button></a></center>
             </div>
-        </div><br><br>
+        </div><br>
+            <script>
+                $(document).ready(function(){
+                    $(window).scroll(function(){
+                        var positionTop = $(document).scrollTop();
+                        console.log(positionTop);
+                        if((positionTop > 1803) && (positionTop < 2439)){
+                            $('#img').addClass('animated bounceInLeft', 2000);
+                            $('#img1').addClass('animated bounceInLeft', 2000);
+                            $('#img2').addClass('animated bounceInRight', 2000);
+                            $('#img3').addClass('animated bounceInRight', 2000);
+                        }
+                    });
+                });
+</script>
+        <br>
         
                                 <!----------------------------    Contact Us Section     --------------------------->
                                 
@@ -124,7 +148,7 @@
            <div class="col-md-6 contact">
          <a name="Contact"></a>   <h1 style="text-align: center; font-family: 'Arial'; color: white;">Contact Us</h1>
             
-                <span style="color: gold;">Phone :<v/span> <span style="color: white;">+91 8560XXXXXX </span><br><br>
+                <span style="color: gold;">Phone :</span> <span style="color: white;">+91 8560XXXXXX </span><br><br>
                 <span style="color: gold;">Email :</span><span style="color: white;"> INFO@HOTEL.COM </span> <br><br>
                 <span style="color: gold;">Address :</span><span style="color: white;"> Jacob Rd, Civil Lines, Jaipur, Rajasthan 302006 </span> <br><br>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3557.727619630101!2d75.78298191452059!3d26.912138266594702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db40b6ed16f5f%3A0x902e85e7d6dc03fb!2sJai+Mahal+Palace!5e0!3m2!1sen!2sin!4v1558615764072!5m2!1sen!2sin" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
