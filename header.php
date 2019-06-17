@@ -12,16 +12,20 @@
         
     <!-- Bootstrap CSS Link   -->  
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/> 
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     
     <!-- External CSS Link  -->        
         <link rel="stylesheet" href="style.css">
         
+         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+        
         <style type="text/css">
-            .box{
+            .zoom .box{
                 background-color: black;
                 opacity: .5;
-                height: 155px;
-                width: 307px;
+                height: 300px;
+                width: 250px;
                 display: none;
                 position: absolute;
                 top: -1px;
@@ -32,13 +36,26 @@
 
                 
             }
-            .gallery:hover .box{
+            .zoom:hover .box{
                 display: block;
-                height: 149.62px;
+                height: 300px;
                 background-color: black;
                 z-index: 2;
-                width: 307px;
+                width: 300px;
             }
+            .zoom{
+                overflow: hidden;
+                width: 300px;
+            }
+            .zoom img{
+                width: 100%;
+                transition: transform .4s;
+                height: 300px;    
+            }
+            .zoom:hover img{
+                transform: scale(1.3);
+            }
+             
         </style>
     </head>
     <body>
