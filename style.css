@@ -76,18 +76,7 @@ body{
     }
    }
 
-.about{
-    overflow: hidden;
-    width: 300px;
-}
-.about .images{
-    width: 300px;
-    transition: transform .4s;
-    
-}
-.about:hover .images{
-   transform: scale(1.1);
-}
+
 .block{
     background-color: white;
     padding: 15px;
