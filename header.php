@@ -1,8 +1,5 @@
-<?php session_start(); 
-    include('user-connect.php');
-//    $sql = "select * from user_signup where email = '".$_SESSION["email"]."'";
-//    $run = mysqli_query($conn, $sql);
-//    $data = mysqli_fetch_array($run);
+   <?php 
+session_start();
 ?>
    <html>
     <head>
@@ -21,6 +18,24 @@
          <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
         
         <style type="text/css">
+            /*************************************************   About Section  ************************************************/
+            
+            .about{
+               
+                overflow: hidden;
+                width: 300px;
+                border-radius: 10px;
+                box-shadow: 2px 3px 10px;
+            }
+            .about img{
+                width: 100%;
+                height: 300px;
+                transition: transform .4s;
+            }
+            .about:hover img{
+                transform: scale(1.3);
+            }
+            
             .zoom .box{
                 background-color: black;
                 opacity: .5;
@@ -55,7 +70,91 @@
             .zoom:hover img{
                 transform: scale(1.3);
             }
-             
+    /***********************************************      Rooms Section  ****************************************/
+            .supirior{
+                background-color: white;
+                padding: 20px;
+                box-shadow: 2px 3px 15px ;
+                border-radius: 10px;
+            }
+            
+    /****************************************** New Room Section      ***************************************/
+            
+            .details{
+                border: 1px solid black;
+                background-color: white;
+                box-shadow: 2px 3px 10px;
+                height: 364.39px;
+                transition: transform .4s;
+                position: absolute;
+                top: -200px;
+                margin-left: 10px;
+            }
+            .details:hover{
+                transform: scale(1.1);
+            }
+            .rooms{
+                font-size: 20px;
+                font-weight: 700;
+                color: red;
+                letter-spacing: 10px;
+                background-color: lightpink;
+            }
+            .rooms-inner{
+                padding: 10px;
+                text-align: justify;
+                font-size: 16px;
+            }
+            @media screen AND (max-width: 720px){
+                .details{
+                    margin-top: 50px;
+                    height: 500px;
+                    width: 400px;
+                    margin-left: 30px;
+                    position: relative;
+                    top: 10px;
+                }
+                .details:hover{
+                    transform: scale(.9);
+                }
+            }
+            
+                /****************************************      Gallery Section     ******************************************/
+              
+            #hover{
+               
+                overflow: hidden;
+                width: 300px;
+                border-radius: 25%;
+                
+            }
+            #hover img{
+                width: 100%;
+                height: 300px;
+                transition: transform .4s;
+            }
+            #hover:hover img{
+                transform: scale(1.3);
+            }
+            @media screen and (max-width: 992px){
+                #hover{
+                    overflow: hidden;
+                    margin-left: 20%;
+                    width: 300px;
+                }
+                #hover img{
+                    margin-top: 15px;
+                    width: 100%;
+                    height: 300px;
+                    transition: transform .4s;
+                }
+                #hover:hover img{
+                transform: scale(1.3);
+            }
+            }
+            .row{
+                margin-right: 0px;
+            }
         </style>
     </head>
     <body>
@@ -78,28 +177,37 @@
                         
                             <div class="navbar-collapse collapse" id="navb">
                             <ul class="nav navbar-nav navbar-left lists">
-                                <li><a href="#Home" >Home </a></li> 
-                                <li><a href="#Booking" >Booking</a></li>
-                                <li><a href="#About" >About</a></li>
-                                <li><a href="#Services" >Services</a></li>
-                                <li><a href="#Gallery" >Gallery</a></li>
-                                <li><a href="#Contact" >Contact</a></li>
+                                <li><a href="index.php" >Home </a></li> 
+                                <li><a href="new-room-booking.php" >Booking</a></li>
+                                <li><a href="about.php" >About</a></li>
+                                <li><a href="services.php" >Services</a></li>
+                                <li><a href="gallery-user.php" >Gallery</a></li>
+                                <li><a href="contact.php" >Contact</a></li>
                                 <?php
+                        
+                                if(isset($_SESSION['user']))
+                                {
+                                    include('user-connect.php');
                                     
-                                    if(isset($_SESSION['email']))
-                                    {
-                                           
-                                ?>      
-                                <li><a href="">Welcome : <?php echo $data['name']; ?></a></li>
-                                <?php
-                                    }
-                                else
-                                {  
-                                ?>
-                                    <li><a href="user-login.php">Signup/Sign In</a></li>   
-                                    <?php                                     
+                                    $sql = "select * from user_signup where email = '".$_SESSION['user']."'";
+                                    $res = mysqli_query($conn, $sql);
+                                    $data = mysqli_fetch_array($res);
+                                               
+                                    ?>
+                                    <li><a href="update_user.php?id=<?php echo $data['id']; ?>">Welcome : <?php echo $data['name']; ?></a></li>
+                                    
+                                    <?php
                                 }
-                                ?>
+                                else
+                                {
+                                    ?>
+                                    <li><a href="user-login.php">Signup/login</a></li>
+                                    <?php
+                                    
+                                }
+                        ?>
+                                    
+                        
                             </ul>
                         </div>
                       
