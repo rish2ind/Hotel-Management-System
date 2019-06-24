@@ -1,8 +1,7 @@
 <?php
-    include('header-other.php');
+    include('header.php');
 ?>
-        
-        
+        <body style="background-image: url('Images/supirior1.jpg'); background-size: cover;"> 
         <div class="container">
             <div class="row">
                 <h1 style="float: left; text-shadow: 2px 3px 15px; background-color: white; padding: 15px;">Standard Rooms</h1>
@@ -27,7 +26,7 @@
             </div>
         </div>
             
-        
+</body>      
        <?php
         include('footer.php');
 ?>
