@@ -1,4 +1,5 @@
-<html>
+<?php include('header.php');?>
+   <html>
     <head>
         <title>Admin Panel</title>
         
@@ -21,36 +22,7 @@
     </head>
     
     <body>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-4 logo">
-                    <img src="Images/Hotel.jpg" alt="" height="100px" >
-                </div>
-                <div class="col-md-8">
-                    <nav class="navbar navbar-default navigation">
-                        <div class="navbar-header ">
-                            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navb">
-                                <i class="glyphicon glyphicon-align-center"></i>
-                            </button>
-                        </div>
-                        <div class="navbar-collapse collapse" id="navb">
-                            <ul class="nav navbar-nav navbar-left lists">
-                                <li><a href="index.php" >Home</a></li>
-                                <li><a href="index.php" >Booking</a></li>
-                                <li><a href="index.php" >About</a></li>
-                                <li><a href="index.php" >Services</a></li>
-                                <li><a href="index.php" >Gallery</a></li>
-                                <li><a href="index.php" >Contact</a></li>
-                                <li><a href="user-login.php">Sign In / Sign Up</a></li>
-                            </ul>
-                        </div>
-                        
-                        
-                        
-                    </nav>
-                </div>
-            </div>
-        </div>
+     
                             <!----------------------------   Sign In         ------------------>
                             
                         <?php
@@ -61,12 +33,13 @@
                             $password = $_REQUEST['password'];
                             
                             $log = "select * from user_signup where email = '$email' and password = '$password'";
+                        
                             $run = mysqli_query($conn, $log);
                             $data=mysqli_fetch_array($run);
                             if($data)
-                            {
-                                
-                                    $_SESSION["email"] = $data['email'];
+                            {                                
+                                $_SESSION['user'] = $data['email'];
+                            
                                 echo "<script>
                                     alert ('Login Successfull');
                                     window.location.href= 'index.php';
@@ -164,8 +137,8 @@
                             
                             $res = mysqli_query($conn, $sql);
                             if($res){
-                                echo "<script>alert ('Welcome to the hotel !');
-                                 window.location.href = 'index.php';</script>";
+                                echo "<script>alert ('Please signin to proceed');
+                                 window.location.href = 'user-login.php';</script>";
                             }
                             else{
                                 echo "<script> 
