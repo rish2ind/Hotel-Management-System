@@ -1,7 +1,9 @@
 <?php
-    include('header-other.php');
+    include('header.php');
 ?>
 
+<body style="background-image: url('Images/supirior1.jpg'); background-size: cover;">
+    
 
 <div class="container">
             <div class="row">
@@ -29,7 +31,7 @@
                 </div>
             </div>
         </div>
-        
+</body>        
        <?php
     include('footer.php');
 ?>
