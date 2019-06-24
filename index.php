@@ -1,9 +1,9 @@
 <?php
     include('header.php');
     include('user-connect.php');
-
-    $sql = "select * from services";
+    $sql = "select * from services"; // Fetching data for services
     $run = mysqli_query($conn, $sql);
+    
     
 ?>
                                
@@ -44,11 +44,11 @@
                             
         <div class="container" >
             <h1><a name="About"></a>About Our Hotel</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam illum perspiciatis tempore earum in ut dolores ipsum quae voluptate omnis dignissimos eum eius, a perferendis tempora eligendi ullam pariatur veritatis!</p>
+            <p>Beautiful Restaurant and Hotel design websites selection, the best gallery of Restaurant Websites design and Hotel Website Design examples.</p>
             <div class="row">
-            <div class="col-md-4 about"><img src="Images/Oberoi%20(1).jpg" alt="" class="img-responsive images"></div>
-                <div class="col-md-4 about"><img src="Images/bar1.jpg" alt="" class="img-responsive images"></div>
-                <div class="col-md-4 about"><img src="Images/Oberoi1.jpg" alt="" class="img-responsive images"></div>
+            <div class="col-md-4"><div class="about"><img src="Images/Oberoi%20(1).jpg" alt="" class="img-responsive images"></div></div>
+                <div class="col-md-4"><div class="about"><img src="Images/bar1.jpg" alt="" class="img-responsive images"></div></div>
+                <div class="col-md-4"><div class="about"><img src="Images/Oberoi1.jpg" alt="" class="img-responsive images"></div></div>
             </div>    
         </div><br><br>
         
@@ -78,18 +78,25 @@
            <a name="Gallery" id="jqueryGallery"></a>
             <h1 style="text-align: center; font-family: 'Arial';">Gallery</h1>
             <div class="row">
-                <div class="col-md-3"><div class="zoom">
-                    <img src="Images/Inside_new.jpg" id="img" alt="" class="img-responsive">
-                     <div class="box">
-                    <p style="margin-top: 40px; border-top: 3px solid white;
-                border-bottom: 3px solid white;">Bar</p>
-                </div>
-                      </div>                                       
-                </div>
-             
-                
-                <div class="col-md-3" >
+        <?php 
+                $sqlgallery = "select * from gallery";
+            $rungallery = mysqli_query($conn, $sqlgallery);
+                while($datagallery = mysqli_fetch_array($rungallery)) { ?>
+                <div class="col-md-3">
                    <div class="zoom">
+                    <img src="Admin_Block/Gallery/<?php echo $datagallery['pic'];  ?>" id="img" alt="">
+                     <div class="box">
+                         <p style="margin-top: 40px; border-top: 3px solid white;
+                         border-bottom: 3px solid white;"><?php echo $datagallery['hover']; ?></p>
+                     </div>
+                   </div>                                       
+                </div>
+            <?php } ?>
+                  </div>
+            </div> 
+               <!-- 
+                <div class="col-md-3" >
+                   <div class="zoom"> 
                     <img src="Images/Inside_new1.jpg" alt="" id="img1" class="img-responsive">
                        <div class="box">
                     <p style="margin-top: 40px; border-top: 3px solid white;
@@ -116,14 +123,13 @@
                      <p style="margin-top: 40px; border-top: 3px solid white;
                 border-bottom: 3px solid white;">Waiting Room</p>
                 </div>
-                    </div>
+                    </div>-->
                     
-                </div>
-            </div><br>
+            <br>
             <div class="row">
                 <center><a href="gallery-user.php"><button class="btn btn-danger">More Images</button></a></center>
             </div>
-        </div><br>
+        <br>
             <script>
                 $(document).ready(function(){
                     $(window).scroll(function(){
@@ -177,6 +183,7 @@
                 </form>
             </div>
         </div>
-        </div>                        
-   <?php include('footer.php');
+        </div> 
+        <?php
+include('footer.php');
    ?>
